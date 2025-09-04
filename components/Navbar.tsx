@@ -1,7 +1,6 @@
 "use client";
 import { useAuthStore } from "@/lib/authStore";
 import { useCartStore } from "@/lib/cartStore";
-import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -17,7 +16,7 @@ export default function Navbar() {
 
   useEffect(() => {
     loadUser();
-  }, []); // only run once on mount
+  }, [loadUser]); // only run once on mount
 
   const handleLogout = () => {
     logout();

@@ -1,6 +1,5 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
-import axiosInstance from "./axiosInstance"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))

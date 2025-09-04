@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useCartStore } from "@/lib/cartStore";
 import axiosInstance from "@/lib/axiosInstance";
 import { getImg } from "@/lib/utils";
+import Image from "next/image";
 
 interface ProductCardProps {
   product: {
@@ -86,11 +87,10 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <div className="bg-white shadow rounded-xl overflow-hidden flex flex-col">
-      <img
-        src={product.image ? getImg(product.image) : "/placeholder.png"}
-        alt={product.name}
-        className="h-48 w-full object-cover"
-      />
+      <Image src={product.image ? getImg(product.image) : "/placeholder.png"}
+        alt={product.name} width={'100'} height={192}
+        className="h-48 w-full  object-cover" />
+      
       <div className="p-4 flex-1 flex flex-col">
         <h3 className="font-semibold text-lg">{product.name}</h3>
         <p className="text-sm text-gray-500">{product.category?.name}</p>

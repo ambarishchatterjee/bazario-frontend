@@ -3,10 +3,8 @@
 import Navbar from "@/components/Navbar";
 import ProductCard from "@/components/products/ProductCard";
 import axiosInstance from "@/lib/axiosInstance";
-import { getImg } from "@/lib/utils";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export default function HomePage() {
   // Categories

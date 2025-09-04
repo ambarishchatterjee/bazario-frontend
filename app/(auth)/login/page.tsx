@@ -10,7 +10,6 @@ export default function LoginPage() {
   const [error, setError] = useState("");
   const router = useRouter();
   const login = useAuthStore((s) => s.login);
-  const { role } = useAuthStore();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
